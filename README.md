@@ -1,50 +1,79 @@
-# Welcome to your Expo app 👋
+# Simple To-Do App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
+This is a simple To-Do app built using React Native with Expo and styled using NativeWind. The app allows users to add, complete, delete, and reorder tasks with drag-and-drop functionality. Tasks persist even after app restarts using AsyncStorage.
 
-## Get started
+## Features
+- Add tasks via an input field.
+- Display a list of tasks.
+- Mark tasks as completed/uncompleted.
+- Delete tasks.
+- Drag and drop to reorder tasks.
+- Smooth animations for adding/deleting tasks using React Native Animated API/Reanimated.
+- Persistent storage with AsyncStorage.
 
-1. Install dependencies
+## Tech Stack
+- React Native (Expo)
+- NativeWind for styling
+- AsyncStorage for persistent data storage
+- React Native Reanimated for animations
+- React Native Gesture Handler for drag-and-drop
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## Folder Structure
+```
+.
+├── README.md
+├── app
+│   ├── _layout.tsx
+│   ├── global.css
+│   └── index.tsx
+├── app.json
+├── assets
+│   ├── fonts
+│   ├── images
+├── components
+│   ├── DraggableItem.tsx
+│   └── Home.tsx
+├── utils
+│   └── helpers.ts
+├── tailwind.config.js
+├── tsconfig.json
+├── package.json
+└── metro.config.js
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Setup Instructions
+### Prerequisites
+Ensure you have the following installed:
+- Node.js (>= 16.x)
+- Expo CLI (`npm install -g expo-cli`)
+- Yarn or npm
 
-## Learn more
+### Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Ayushhgupta39/expo-todo-app.git
+   cd expo-todo-app
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+   or
+   ```sh
+   yarn install
+   ```
 
-To learn more about developing your project with Expo, look at the following resources:
+### Running the App
+To start the app, run:
+```sh
+npx expo start
+```
+This will open the Expo Developer Tools, allowing you to run the app on an emulator or a physical device.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Screenshot
+![Home Screen](./assets/images/screenshots/home.png)
 
-## Join the community
+## Additional Notes
+- This app is an assignment by Ayush Gupta for the Frontend Intern position at The Milaan.
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
